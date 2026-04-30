@@ -1,4 +1,6 @@
 import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
+
 import $ from "jquery";
 
 
@@ -10,6 +12,13 @@ function mobileTrigger() {
 
 
 function useJqueryNav(initialValue = 0) {
+  const location = useLocation();
+  useEffect(() => {
+    document.body.classList.remove("has-overlay");
+    return () => {
+      document.body.classList.remove("has-overlay");
+    };
+  }, [location.pathname]);
   useEffect(()=>{
     $(".mobile-trigger").on("click", mobileTrigger);
   
@@ -143,7 +152,7 @@ function useJqueryNav(initialValue = 0) {
       $(".has-dropdown>a, .has-dropdown>span").off();
     };
   
-  },[])
+  },[location.pathname])
 }
 
 export default useJqueryNav;
