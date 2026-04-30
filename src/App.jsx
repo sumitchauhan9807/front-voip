@@ -1,11 +1,13 @@
 import './App.css'
 import 'src/assets/css/main.css'
+import useJqueryNav from 'src/hooks/useJqueryNav'
 import Header from 'src/layout/Header.jsx'
 import Hero from 'src/components/home/Hero'
 import Testimonials from 'src/components/home/Testimonials'
-
+import { useEffect } from 'react'
 
 function App() {
+  useJqueryNav()
   return (
     <>
     {/* has-overlay */}
