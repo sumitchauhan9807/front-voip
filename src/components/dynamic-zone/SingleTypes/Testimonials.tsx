@@ -14,7 +14,7 @@ function Testimonials() {
     arrows: false,
     dots: true,
 
-    autoplay: true,
+    autoplay: false,
     autoplaySpeed: 2000,
     speed: 600,
 

@@ -10,12 +10,10 @@ function App() {
   useJqueryNav()
   return (
     <>
-    <body>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/product" element={<Product />} />
       </Routes>
-    </body>
     </>
   )
 }
