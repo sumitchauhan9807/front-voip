@@ -9,10 +9,16 @@ export const FILTER_TYPES = {
 
 export const GRID_TYPES = {
   GRID_1: "grids.grid-1",
+  CERTIFICATION_GRID:'relational.certifications'
 } as const;
 
 export const RELATIONAL_TYPES = {
   LOGO_GRID: "relational.logo-grid",
   TESTIMONIALS: "relational.testimonials",
   CERTIFICATIONS:"relational.certifications"
+} as const;
+
+
+export const PRE_FOOTER_TYPES = {
+  PRE_FOOTER_1: "pre-footer.pre-footer",
 } as const;

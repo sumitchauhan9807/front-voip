@@ -10,7 +10,7 @@ function Grid1(props:GridBlockType) {
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[20px]">
         {props.lists.map((list,index)=>{
           return (
-            <div className="bg-[#F2F4F7] rounded-[8px] p-[20px] flex">
+            <div key={index} className="bg-[#F2F4F7] rounded-[8px] p-[20px] flex">
               <div>
                 <div className="p-[5px] bg-white rounded-[5px] mr-[18px] w-[50px] h-[50px] flex justify-center items-center">
                   <img src={appendBaseUrl(list.image.url)}/>

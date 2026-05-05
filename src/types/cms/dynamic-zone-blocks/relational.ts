@@ -15,18 +15,18 @@ export interface CertificationBlockType extends RelationalType  {
 export type LogoGridBlockType = {
   __component: typeof RELATIONAL_TYPES.LOGO_GRID;
   title: TitleType;
-  type: string;
+  type: 'one_way' | 'two_way';
   logo_grid_1: LogoGrid[];
   logo_grid_2: LogoGrid[];
 };
 
-export type CertificationGridBlockType = {
-  __component: typeof RELATIONAL_TYPES.CERTIFICATIONS;
-  title: TitleType;
-  certifications:{
-    certification:CertificationType
-  }
-};
+// export type CertificationGridBlockType = {
+//   __component: typeof RELATIONAL_TYPES.CERTIFICATIONS;
+//   title: TitleType;
+//   certifications:{
+//     certification:CertificationType
+//   }
+// };
 
 export type TestimonialBlockType = {
   __component: typeof RELATIONAL_TYPES.TESTIMONIALS;

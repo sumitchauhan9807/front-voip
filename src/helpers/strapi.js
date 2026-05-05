@@ -53,6 +53,11 @@ const POPULATE_MAP = {
     lists:{
       image:true
     }
+  },
+  "pre-footer.pre-footer":{
+    preFooter:{
+      image:true
+    }
   }
 };
 
@@ -93,5 +98,6 @@ export const CONTENT_QUERY = buildContentQuery("content", [
   "relational.testimonials",
   "relational.certifications",
   "filters.filter-1",
-  "grids.grid-1"
+  "grids.grid-1",
+  "pre-footer.pre-footer"
 ]);

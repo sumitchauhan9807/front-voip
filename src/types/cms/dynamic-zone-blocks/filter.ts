@@ -20,7 +20,7 @@ export type FilterItemType = {
       text: string;
       url: string;
     };
-    testimonials: TestimonialType
+    testimonials: TestimonialType[]
   };
   image: MediaType;
 };

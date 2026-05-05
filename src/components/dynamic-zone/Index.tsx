@@ -1,6 +1,6 @@
 import { lazy, Suspense } from "react";
 import type { DynamicZoneContentType } from "src/types/cms/dynamic-zone";
-import { HERO_TYPES ,RELATIONAL_TYPES ,FILTER_TYPES , GRID_TYPES } from "src/types/cms/constants";
+import { HERO_TYPES ,RELATIONAL_TYPES ,FILTER_TYPES , GRID_TYPES ,PRE_FOOTER_TYPES } from "src/types/cms/constants";
 
 // Hero
 const Hero1 = lazy(() => import("src/components/dynamic-zone/Hero/Hero1"));
@@ -15,6 +15,12 @@ const Filter1 = lazy(() => import("src/components/dynamic-zone/Filter/Filter1"))
 
 // Grids
 const Grid1 = lazy(() => import("src/components/dynamic-zone/Grid/Grid1"));
+const CertificationGrid = lazy(() => import("src/components/dynamic-zone/Grid/CertificationGrid"));
+
+// footers
+const PreFooter1 = lazy(() => import("src/components/dynamic-zone/PreFooter/PreFooter1"));
+
+
 
 export type HeroProps = {
   name:"asd"
@@ -31,6 +37,9 @@ const componentMap: Record<string, React.ElementType> = {
   [RELATIONAL_TYPES.TESTIMONIALS]: Testimonials,
   [FILTER_TYPES.FILTER_1]: Filter1,
   [GRID_TYPES.GRID_1]: Grid1,
+  [GRID_TYPES.CERTIFICATION_GRID]: CertificationGrid,
+  [PRE_FOOTER_TYPES.PRE_FOOTER_1]: PreFooter1,
+
 
 
 
