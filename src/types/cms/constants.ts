@@ -13,5 +13,6 @@ export const GRID_TYPES = {
 
 export const RELATIONAL_TYPES = {
   LOGO_GRID: "relational.logo-grid",
-  TESTIMONIALS: "relational.testimonials"
+  TESTIMONIALS: "relational.testimonials",
+  CERTIFICATIONS:"relational.certifications"
 } as const;

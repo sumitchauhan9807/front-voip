@@ -1,10 +1,10 @@
-import { HeroBlockType } from "src/types/cms/dynamic-zone-blocks/hero";
-import { FilterBlockType } from "src/types/cms/dynamic-zone-blocks/filter";
-import { GridBlockType } from "src/types/cms/dynamic-zone-blocks/grid";
+import { HeroBlockType } from "src/types/cms";
+import { FilterBlockType } from "src/types/cms";
+import { GridBlockType } from "src/types/cms";
 import {
   LogoGridBlockType,
   TestimonialBlockType,
-} from "src/types/cms/dynamic-zone-blocks/relational";
+} from "src/types/cms";
 
 export type DynamicZoneContentType =
   | HeroBlockType
@@ -29,10 +29,22 @@ export type TitleType = {
 export type HeadingWithImage = {
   id: number;
   heading: string;
-  image: string;
+  image: MediaType;
+};
+
+export type TitleWithImage = {
+  id: number;
+  heading: string;
+  subHeading: string;
+  image: MediaType;
 };
 
 export type ButtonType = {
   text: string;
   url: string;
 };
+
+export interface RelationalType  {
+  documentId:string;
+  id:number
+}

@@ -7,8 +7,8 @@ const Hero1 = lazy(() => import("src/components/dynamic-zone/Hero/Hero1"));
 const Hero2 = lazy(() => import("src/components/dynamic-zone/Hero/Hero2"));
 
 // Relational
-const LogoGrid = lazy(() => import("src/components/dynamic-zone/SingleTypes/LogoGrid"));
-const Testimonials = lazy(() => import("src/components/dynamic-zone/SingleTypes/Testimonials"));
+const LogoGrid = lazy(() => import("src/components/dynamic-zone/LogoGrid/LogoGrid"));
+const Testimonials = lazy(() => import("src/components/dynamic-zone/Testimonials/Testimonials1"));
 
 // Filter
 const Filter1 = lazy(() => import("src/components/dynamic-zone/Filter/Filter1"));
@@ -16,7 +16,9 @@ const Filter1 = lazy(() => import("src/components/dynamic-zone/Filter/Filter1"))
 // Grids
 const Grid1 = lazy(() => import("src/components/dynamic-zone/Grid/Grid1"));
 
-
+export type HeroProps = {
+  name:"asd"
+}
 
 type DynamicZoneProps = {
   data: DynamicZoneContentType[];
@@ -37,7 +39,11 @@ const componentMap: Record<string, React.ElementType> = {
 
 const DynamicZone = ({ data }: DynamicZoneProps) => {
   if (!data?.length) return null;
-
+  // data.map((com)=>{
+  //   if(com.__component == 'filters.filter-1'){
+  //     console.log(com.)
+  //   }
+  // })
   return (
     <Suspense fallback={<div>Loading components...</div>}>
       {data.map((component, index) => {

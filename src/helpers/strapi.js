@@ -1,15 +1,49 @@
-import {HERO_TYPES} from 'src/types/cms/constants'
+// import {HERO_TYPES} from 'src/types/cms/constants'
 
 
 
 const POPULATE_MAP = {
-  [HERO_TYPES.HERO_1]: null,
-  "hero.hero-2": null,
-  "relational.logo-grid": null,
-  "relational.testimonials": null,
+  "hero.hero-1": {
+    title:true,
+    certifications:{
+      certification:true
+    }
+  },
+  "hero.hero-2": {
+    certifications:{
+      certification:true
+    }
+  },
+  "relational.logo-grid": {
+    title:true,
+    logo_grid_1:{
+      logo:true
+    },
+    logo_grid_2:true,
+
+  },
+  "relational.testimonials": {
+    testimonials:{
+      title:true,
+      points:true
+    }
+  },
+  "relational.certifications":{
+    title:true,
+    certifications:{
+      certification:true
+    }
+  },
   "filters.filter-1": {
+    title:true,
     items: {
-      contents: true,
+      contents: {
+        title:true,
+        testimonials:{
+          title:true,
+          points:true
+        }
+      },
       image: true,
       // testimonial:true
     },
@@ -57,6 +91,7 @@ export const CONTENT_QUERY = buildContentQuery("content", [
   "hero.hero-2",
   "relational.logo-grid",
   "relational.testimonials",
+  "relational.certifications",
   "filters.filter-1",
   "grids.grid-1"
 ]);

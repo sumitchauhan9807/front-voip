@@ -15,6 +15,11 @@ function useJqueryNav(initialValue = 0) {
   const location = useLocation();
   useEffect(() => {
     document.body.classList.remove("has-overlay");
+     window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: "smooth", // or "auto"
+    });
     return () => {
       document.body.classList.remove("has-overlay");
     };

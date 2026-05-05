@@ -1,5 +1,5 @@
 import { api } from "src/axios";
-import { CONTENT_QUERY } from 'src/helpers'
+import { CONTENT_QUERY } from 'src/helpers/strapi'
 import type {HomeResponse} from 'src/types/cms/strapi'
 
 

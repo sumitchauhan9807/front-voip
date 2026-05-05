@@ -1,9 +1,11 @@
 import type {TitleType,MediaType} from 'src/types/cms/dynamic-zone'
 import {FILTER_TYPES} from 'src/types/cms/constants'
+import {TestimonialType} from 'src/types/cms'
 
 export type FilterBlockType = {
   __component: typeof FILTER_TYPES.FILTER_1;
   id: number;
+  title:TitleType;
   items: FilterItemType[];
 };
 
@@ -18,11 +20,7 @@ export type FilterItemType = {
       text: string;
       url: string;
     };
-    testimonial: {
-      id: number;
-      documentId: string;
-      slug: string;
-    };
+    testimonials: TestimonialType
   };
   image: MediaType;
 };
