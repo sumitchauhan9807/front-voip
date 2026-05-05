@@ -1,0 +1,125 @@
+// homeQuery.ts
+import { gql } from "@apollo/client";
+
+export const HOME_QUERY = gql`
+  query ComponentHeroHero1 {
+    home {
+      content {
+        ... on ComponentHeroHero1 {
+          id
+          __typename
+          title {
+            heading
+            subHeading
+            id
+          }
+          certifications {
+            certification {
+              id
+              image {
+                url
+              }
+              heading
+              subHeading
+            }
+          }
+        }
+        ... on ComponentGridsGrid1 {
+          lists {
+            heading
+            image {
+              url
+            }
+          }
+          title {
+            subHeading
+            heading
+          }
+        }
+        ... on ComponentFiltersFilter1 {
+          title {
+            subHeading
+            heading
+          }
+          items {
+            name
+            image {
+              url
+            }
+            contents {
+              button {
+                url
+                text
+              }
+              testimonials {
+                points {
+                  heading
+                  subHeading
+                  image {
+                    url
+                  }
+                }
+                title {
+                  subHeading
+                  heading
+                }
+              }
+              title {
+                heading
+                subHeading
+              }
+            }
+          }
+        }
+        ... on ComponentRelationalLogoGrid {
+          logo_grid_1 {
+            logo {
+              url
+            }
+          }
+          logo_grid_2 {
+            logo {
+              url
+            }
+          }
+          title {
+            heading
+            subHeading
+          }
+        }
+        ... on ComponentRelationalCertifications {
+          certifications {
+            certification {
+              heading
+            }
+          }
+          title {
+            subHeading
+            heading
+          }
+        }
+        ... on ComponentRelationalTestimonials {
+          testimonials {
+            title {
+              subHeading
+              heading
+            }
+            points {
+              heading
+              subHeading
+            }
+          }
+        }
+        ... on ComponentPreFooterPreFooter {
+          preFooter {
+            heading
+            subHeading
+            image {
+              url
+            }
+          }
+        }
+      }
+    }
+  }
+`;

@@ -9,6 +9,9 @@ import {HERO_TYPES,GRID_TYPES,FILTER_TYPES} from 'src/types/cms/constants'
 import { useEffect } from 'react'
 import {fetchHomeData} from 'src/api/home'
 import { useQuery } from "@tanstack/react-query";
+// import { useQuery } from "@apollo/client/react";
+
+import { HOME_QUERY } from 'src/graphql/homeQuery'
 
 function Home() { 
 
@@ -16,7 +19,14 @@ function Home() {
     queryKey: ["data"],
     queryFn: fetchHomeData,
   });
-  console.log(data,"datadatadata")
+  // console.log(data,"datadatadata")
+
+  // const { data, loading, error } = useQuery(HOME_QUERY);
+
+  // if (loading) return <p>Loading...</p>;
+  // if (error) return <p>Error</p>;
+
+  // console.log(data)
   // let test = data?.data?.content.find(x => x.__component == GRID_TYPES.GRID_1)
   // console.log(test)
   return (
