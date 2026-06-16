@@ -48,7 +48,7 @@ function Footer() {
                 </a>
               </div>
               <p className="fs-16 font-calSans text-white mb-3">Reviews</p>
-              <img src="https://cdn.justcall.io/assets-marketing/images/svg/footer-stars.svg" alt="Stars" width={136} height={19} loading="lazy" />
+              {/* <img src="https://cdn.justcall.io/assets-marketing/images/svg/footer-stars.svg" alt="Stars" width={136} height={19} loading="lazy" /> */}
               <div className="footer-reviews__logos flex gap-6 mt-3">
                 <a href="https://www.g2.com/products/saas-labs-justcall/reviews" target="_blank"><img src="https://cdn.justcall.io/assets-marketing/images/temp/g2-crowd-logo.webp" alt="G2" width="25.46" height="26.22" loading="lazy" /></a>
                 <a href="https://www.trustpilot.com/review/justcall.io" target="_blank"><img src="https://cdn.justcall.io/assets-marketing/images/temp/trustpilot-logo.webp" alt="Trustpilot" width="26.22" height="26.22" loading="lazy" /></a>
